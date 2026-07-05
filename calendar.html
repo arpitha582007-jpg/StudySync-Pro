@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StudySync Pro | Calendar</title>
+
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/calendar.css">
+<link rel="stylesheet" href="css/ui-polish.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<aside class="sidebar"></aside>
+
+<main class="main-content">
+
+<h1>📅 Study Calendar</h1>
+
+<p class="subtitle">
+View your complete monthly study schedule.
+</p>
+
+<div class="calendar-container">
+
+<div class="calendar-header">
+
+<button id="prevMonth">
+<i class="fa-solid fa-chevron-left"></i>
+</button>
+
+<h2 id="monthYear"></h2>
+
+<button id="nextMonth">
+<i class="fa-solid fa-chevron-right"></i>
+</button>
+
+</div>
+
+<div class="weekdays">
+
+<div>Sun</div>
+<div>Mon</div>
+<div>Tue</div>
+<div>Wed</div>
+<div>Thu</div>
+<div>Fri</div>
+<div>Sat</div>
+
+</div>
+
+<div id="calendarDays" class="calendar-days">
+
+</div>
+
+</div>
+
+<div class="event-box">
+
+<h2>Events</h2>
+
+<div id="eventList">
+
+Click a date to see events.
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/theme.js"></script>
+<script type="module" src="js/sidebar.js"></script>
+<script type="module" src="js/logout.js"></script>
+<script src="js/calendar.js"></script>
+
+</body>
+
+</html>

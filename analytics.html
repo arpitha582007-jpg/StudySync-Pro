@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>StudySync Pro | Analytics</title>
+
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/analytics.css">
+<link rel="stylesheet" href="css/ui-polish.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<aside class="sidebar"></aside>
+
+<main class="main-content">
+
+<h1>📊 Analytics</h1>
+
+<p class="subtitle">
+
+Track your study performance.
+
+</p>
+
+<div class="chart-grid">
+
+<div class="chart-card">
+
+<h2>Weekly Study Hours</h2>
+
+<canvas id="studyChart"></canvas>
+
+</div>
+
+<div class="chart-card">
+
+<h2>Task Completion</h2>
+
+<canvas id="taskChart"></canvas>
+
+</div>
+
+<div class="chart-card">
+
+<h2>Assignments</h2>
+
+<canvas id="assignmentChart"></canvas>
+
+</div>
+
+<div class="chart-card">
+
+<h2>Subjects</h2>
+
+<canvas id="subjectChart"></canvas>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/theme.js"></script>
+<script type="module" src="js/logout.js"></script>
+
+<script type="module" src="js/analytics.js"></script>
+
+<script type="module" src="js/sidebar.js"></script>
+
+</body>
+
+</html>

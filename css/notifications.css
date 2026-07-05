@@ -1,0 +1,220 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:var(--bg);
+    color:var(--text);
+
+}
+
+.dashboard{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+.main-content{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    padding:40px;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    min-height:100vh;
+
+}
+
+h1{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+    color:var(--text);
+
+}
+
+.subtitle{
+
+    color:var(--text-light);
+
+    margin-bottom:30px;
+
+}
+
+/* ===========================
+   Notification List
+=========================== */
+
+#notificationContainer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/* ===========================
+   Notification Card
+=========================== */
+
+.notification-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-left:6px solid var(--primary);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.notification-card:hover{
+
+    background:var(--card-hover);
+
+    transform:translateY(-6px);
+
+}
+
+.notification-title{
+
+    font-size:20px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+    margin-bottom:10px;
+
+}
+
+.notification-message{
+
+    color:var(--text-light);
+
+    line-height:1.6;
+
+    margin-bottom:15px;
+
+}
+
+.notification-date{
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+}
+
+/* ===========================
+   Notification Types
+=========================== */
+
+.assignment{
+
+    border-left-color:#ef4444;
+
+}
+
+.exam{
+
+    border-left-color:#f59e0b;
+
+}
+
+.planner{
+
+    border-left-color:#22c55e;
+
+}
+
+.pomodoro{
+
+    border-left-color:#3b82f6;
+
+}
+
+.general{
+
+    border-left-color:#8b5cf6;
+
+}
+
+/* ===========================
+   Empty State
+=========================== */
+
+.empty-state{
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    color:var(--text-light);
+
+}
+
+.empty-state i{
+
+    font-size:60px;
+
+    color:var(--primary);
+
+    margin-bottom:18px;
+
+}
+
+.empty-state h3{
+
+    color:var(--text);
+
+    margin-bottom:10px;
+
+}
+
+.empty-state p{
+
+    color:var(--text-light);
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    .main-content{
+
+        margin-left:0;
+
+        width:100%;
+
+        padding:20px;
+
+    }
+
+}

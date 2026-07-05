@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Subjects | StudySync Pro</title>
+
+<link rel="stylesheet" href="css/subjects.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/toast.css">
+<link rel="stylesheet" href="css/ui-polish.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+    
+        <!-- Sidebar -->
+    
+        <aside class="sidebar"></aside>
+        <!-- Main Content -->
+    
+        <main class="main-content">
+    
+            <h1>📚 Subjects</h1>
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+            
+                <input
+                    type="text"
+                    id="subjectSearch"
+                    placeholder="Search subjects...">
+            
+            </div>
+    
+            <p class="subtitle">
+                Manage all your subjects in one place.
+            </p>
+    
+            <!-- Add Subject -->
+    
+            <div class="subject-form">
+    
+                <input
+                    type="text"
+                    id="subjectName"
+                    placeholder="Subject Name">
+    
+                <input
+                    type="text"
+                    id="facultyName"
+                    placeholder="Faculty Name">
+    
+                <input
+                    type="color"
+                    id="subjectColor"
+                    value="#4facfe">
+    
+                <button id="addSubject">
+                    + Add Subject
+                </button>
+    
+            </div>
+    
+            <!-- Subject Cards -->
+    
+            <div id="subjectContainer">
+    
+            </div>
+    
+        </main>
+    
+    </div>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/theme.js"></script>
+    <script type="module" src="js/logout.js"></script>
+    <script type="module" src="js/subjects.js"></script>
+    <script type="module" src="js/sidebar.js"></script>
+    <script src="js/toast.js"></script>
+    
+    </body>
+
+</html>

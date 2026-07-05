@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Planner | StudySync Pro</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/planner.css">  
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="css/ui-polish.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar"></aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <h1>📅 Study Planner</h1>
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+                type="text"
+                id="plannerSearch"
+                placeholder="Search planner events...">
+        </div>
+    
+        <p class="subtitle">
+            Organize your study schedule and never miss an important event.
+        </p>
+    
+        <!-- Planner Form -->
+    
+        <div class="planner-form">
+    
+            <input
+                type="date"
+                id="plannerDate">
+    
+            <input
+                type="text"
+                id="plannerTitle"
+                placeholder="Enter Study Event">
+    
+            <button id="addPlannerBtn">
+                Add Event
+            </button>
+    
+        </div>
+    
+        <!-- Planner Events -->
+    
+        <div class="planner-list">
+    
+            <h2>Upcoming Events</h2>
+    
+            <div id="plannerContainer">
+    
+                <p>No events added.</p>
+    
+            </div>
+    
+        </div>
+    
+    </main>
+
+</div>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/theme.js"></script>
+<script type="module" src="js/logout.js"></script>
+<script type="module" src="js/planner.js"></script>
+<script type="module" src="js/sidebar.js"></script>
+<script src="js/toast.js"></script>
+
+</body>
+
+</html>

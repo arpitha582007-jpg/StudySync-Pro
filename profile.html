@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profile | StudySync Pro</title>
+
+<link rel="stylesheet" href="css/profile.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/toast.css">
+<link rel="stylesheet" href="css/ui-polish.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar"></aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <h1>👤 My Profile</h1>
+
+        <p class="subtitle">
+            Manage your personal information.
+        </p>
+
+        <div class="profile-container">
+
+            <!-- Profile Picture -->
+
+            <div class="profile-photo">
+
+                <img
+                    id="profilePic"
+                    src="https://via.placeholder.com/150"
+                    alt="Profile Picture">
+
+                <input
+                    type="file"
+                    id="uploadPhoto"
+                    accept="image/*">
+
+            </div>
+
+            <!-- Profile Form -->
+
+            <div class="profile-form">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Full Name">
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email">
+
+                <input
+                    type="text"
+                    id="college"
+                    placeholder="College Name">
+
+                <input
+                    type="text"
+                    id="branch"
+                    placeholder="Branch">
+
+                <input
+                    type="text"
+                    id="year"
+                    placeholder="Year">
+
+                <textarea
+                    id="goal"
+                    placeholder="Your Study Goal"></textarea>
+
+                    <button id="saveProfile">
+                        Save Profile
+                    </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/theme.js"></script>
+<script type="module" src="js/logout.js"></script>
+<script type="module" src="js/sidebar.js"></script>
+<script src="js/toast.js"></script>
+<script type="module" src="js/profile.js"></script>
+</body>
+
+</html>        

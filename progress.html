@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudySync Pro | Dashboard</title>
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/progress.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/ui-polish.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar"></aside>
+
+    <!-- ================= Main Content ================= -->
+
+    <main class="main-content">
+
+        <h1>📈 Progress Analytics</h1>
+    
+        <p class="subtitle">
+            Track your study journey with live statistics.
+        </p>
+    
+        <!-- Statistics Cards -->
+    
+        <div class="stats-grid">
+    
+            <div class="stat-card">
+                <i class="fa-solid fa-book"></i>
+                <h2 id="subjectCount">0</h2>
+                <p>Subjects</p>
+            </div>
+    
+            <div class="stat-card">
+                <i class="fa-solid fa-list-check"></i>
+                <h2 id="taskCount">0</h2>
+                <p>Completed Tasks</p>
+            </div>
+    
+            <div class="stat-card">
+                <i class="fa-solid fa-clock"></i>
+                <h2 id="pomodoroCount">0</h2>
+                <p>Pomodoro Sessions</p>
+            </div>
+    
+            <div class="stat-card">
+                <i class="fa-solid fa-fire"></i>
+                <h2 id="streakCount">1</h2>
+                <p>Study Streak</p>
+            </div>
+    
+        </div>
+    
+        <!-- Progress Bars -->
+    
+        <div class="progress-section">
+    
+            <h2>📊 Progress</h2>
+    
+            <div class="progress-item">
+    
+                <span>Tasks Completed</span>
+    
+                <div class="progress-bar">
+                    <div id="taskProgress" class="progress-fill"></div>
+                </div>
+    
+            </div>
+    
+            <div class="progress-item">
+    
+                <span>Study Goal</span>
+    
+                <div class="progress-bar">
+                    <div id="studyProgress" class="progress-fill"></div>
+                </div>
+    
+            </div>
+    
+            <div class="progress-item">
+    
+                <span>Pomodoro Goal</span>
+    
+                <div class="progress-bar">
+                    <div id="pomodoroProgress" class="progress-fill"></div>
+                </div>
+    
+            </div>
+    
+        </div>
+        <!-- Charts -->
+
+<div class="chart-container">
+
+    <div class="chart-card">
+
+        <h2>📊 Study Overview</h2>
+
+        <canvas id="studyChart"></canvas>
+
+    </div>
+
+    <div class="chart-card">
+
+        <h2>🍩 Task Status</h2>
+
+        <canvas id="taskChart"></canvas>
+
+    </div>
+
+</div>
+        <!-- Achievements -->
+    
+        <div class="achievement-section">
+    
+            <h2>🏆 Achievements</h2>
+    
+            <div class="achievement-list">
+    
+                <div class="achievement">
+                    🥇 First Subject Added
+                </div>
+    
+                <div class="achievement">
+                    ✅ Complete 5 Tasks
+                </div>
+    
+                <div class="achievement">
+                    🍅 Finish 5 Pomodoro Sessions
+                </div>
+    
+                <div class="achievement">
+                    🎯 Productivity Master
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </main>    
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/theme.js"></script>
+<script type="module" src="js/logout.js"></script>
+<script type="module" src="js/progress.js"></script>
+<script type="module" src="js/sidebar.js"></script>
+
+</body>
+
+</html>

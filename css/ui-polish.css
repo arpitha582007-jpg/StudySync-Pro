@@ -1,0 +1,500 @@
+/* =====================================================
+   StudySync Pro - Global UI Polish
+   ===================================================== */
+
+/* ---------- Root Theme ---------- */
+
+:root{
+
+    --bg:#0f172a;
+    --card:#1e293b;
+    --card-hover:#243447;
+
+    --text:#ffffff;
+    --text-light:#cbd5e1;
+
+    --primary:#3b82f6;
+    --secondary:#38bdf8;
+
+    --primary-dark:#2563eb;
+    --border:rgba(255,255,255,.08);
+    --shadow:0 12px 30px rgba(0,0,0,.25);
+    --radius:20px;
+    --transition:.3s ease;
+
+}
+/* ===============================
+   Light Theme
+=============================== */
+
+body.light-theme{
+
+    --bg:#f8fafc;
+    --card:#ffffff;
+    --card-hover:#f1f5f9;
+
+    --text:#0f172a;
+    --text-light:#475569;
+
+    --border:#dbe4ee;
+
+}
+
+/* ---------- Global ---------- */
+
+*{
+
+    transition:
+        background .3s,
+        color .3s,
+        border-color .3s,
+        transform .25s,
+        box-shadow .25s;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+}
+
+/* ---------- Selection ---------- */
+
+::selection{
+
+    background:var(--secondary);
+
+    color:white;
+
+}
+
+/* ---------- Scrollbar ---------- */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* ---------- Fade Animation ---------- */
+
+.fade-in{
+
+    animation:fadeIn .45s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ---------- Universal Cards ---------- */
+
+.stat-card,
+.dashboard-card,
+.subject-card,
+.task-card,
+.assignment-card,
+.exam-card,
+.planner-card,
+.notification-card{
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    overflow:hidden;
+
+}
+
+.stat-card:hover,
+.dashboard-card:hover,
+.subject-card:hover,
+.task-card:hover,
+.assignment-card:hover,
+.exam-card:hover,
+.planner-card:hover,
+.notification-card:hover{
+
+    transform:
+        translateY(-8px)
+        scale(1.02);
+
+}
+
+/* ---------- Universal Buttons ---------- */
+
+button{
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+/* ---------- Inputs ---------- */
+
+input,
+textarea,
+select{
+
+    transition:var(--transition);
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline:none;
+
+    box-shadow:
+    0 0 0 3px
+    rgba(56,189,248,.35);
+
+}
+/* =====================================================
+   Premium Buttons
+===================================================== */
+
+.action-btn,
+.save-btn,
+.add-btn{
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    color:white;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    box-shadow:0 10px 25px rgba(59,130,246,.30);
+
+}
+
+.action-btn:hover,
+.save-btn:hover,
+.add-btn:hover{
+
+    box-shadow:0 18px 35px rgba(59,130,246,.45);
+
+}
+
+/* =====================================================
+   Glass Effect
+===================================================== */
+
+.glass{
+
+    background:rgba(30,41,59,.72);
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* =====================================================
+   Loading Spinner
+===================================================== */
+
+.loading-spinner{
+
+    width:60px;
+
+    height:60px;
+
+    border:5px solid rgba(255,255,255,.15);
+
+    border-top:5px solid var(--secondary);
+
+    border-radius:50%;
+
+    animation:spin .9s linear infinite;
+
+    margin:auto;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* =====================================================
+   Empty State
+===================================================== */
+
+.empty-state{
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    color:var(--text-light);
+
+}
+
+.empty-state i{
+
+    font-size:60px;
+
+    color:var(--secondary);
+
+    margin-bottom:18px;
+
+}
+
+.empty-state h3{
+
+    margin-bottom:10px;
+
+}
+
+.empty-state p{
+
+    opacity:.8;
+
+}
+
+/* =====================================================
+   Progress Animation
+===================================================== */
+
+.progress-fill{
+
+    animation:growBar 1.2s ease;
+
+}
+
+@keyframes growBar{
+
+    from{
+
+        width:0;
+
+    }
+
+}
+
+/* =====================================================
+   Floating Cards
+===================================================== */
+
+.dashboard-card,
+.stat-card{
+
+    animation:floatUp .45s ease;
+
+}
+
+@keyframes floatUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+   Mobile Responsive
+===================================================== */
+
+@media(max-width:768px){
+
+    .main-content{
+
+        margin-left:0 !important;
+
+        width:100% !important;
+
+        padding:20px !important;
+
+    }
+
+    .stats-grid,
+    .dashboard-grid{
+
+        grid-template-columns:1fr !important;
+
+    }
+
+    h1{
+
+        font-size:28px;
+
+    }
+
+}
+
+/* =====================================================
+   Tablet
+===================================================== */
+
+@media(min-width:769px) and (max-width:1024px){
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* =====================================================
+   Nice Hover
+===================================================== */
+
+.stat-card:hover i,
+.dashboard-card:hover i{
+
+    transform:scale(1.15);
+
+    color:#60a5fa;
+
+}
+body{
+
+    background:var(--bg);
+    color:var(--text);
+
+}
+
+.stat-card,
+.dashboard-card,
+.subject-card,
+.task-card,
+.assignment-card,
+.exam-card,
+.notification-card,
+.planner-card,
+.settings-card{
+
+    background:var(--card);
+    color:var(--text);
+
+}
+
+.stat-card:hover,
+.dashboard-card:hover{
+
+    background:var(--card-hover);
+
+}
+
+input,
+textarea,
+select{
+
+    background:var(--card);
+    color:var(--text);
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+body.light-theme input,
+body.light-theme textarea,
+body.light-theme select{
+
+    border:1px solid #cbd5e1;
+
+}
+/* Sidebar Theme */
+
+.sidebar{
+    background:var(--card);
+    color:var(--text);
+}
+
+.menu li,
+.logout li{
+    color:var(--text);
+}
+
+.menu li:hover,
+.logout li:hover{
+    background:var(--card-hover);
+}
+
+.menu li.active{
+    background:var(--primary);
+}
+
+.logo{
+    color:var(--primary);
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudySync Pro | Settings</title>
+
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/ui-polish.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar"></aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <h1>⚙️ Settings</h1>
+        <p class="subtitle">
+            Manage your StudySync Pro preferences.
+        </p>
+
+        <div class="settings-card">
+
+            <h2>🌙 Appearance</h2>
+
+            <label class="switch-row">
+                <span>Dark Mode</span>
+                <input type="checkbox" id="darkMode" checked>
+            </label>
+
+            <hr>
+
+            <h2>🔔 Notifications</h2>
+
+            <label class="switch-row">
+                <span>Enable Notifications</span>
+                <input type="checkbox" id="notifications" checked>
+            </label>
+
+            <hr>
+
+            <h2>🍅 Pomodoro</h2>
+
+            <label>Focus Time</label>
+            <select id="focusTime">
+                <option>25</option>
+                <option>30</option>
+                <option>45</option>
+                <option>60</option>
+            </select>
+
+            <label>Short Break</label>
+            <select id="shortBreak">
+                <option>5</option>
+                <option>10</option>
+            </select>
+
+            <label>Long Break</label>
+            <select id="longBreak">
+                <option>15</option>
+                <option>20</option>
+            </select>
+
+            <hr>
+
+            <h2>🎯 Study Goal</h2>
+
+            <label>Daily Study Goal (Hours)</label>
+
+            <input
+                type="number"
+                id="dailyGoal"
+                min="1"
+                max="24"
+                value="4">
+
+            <hr>
+
+            <h2>🗑 Data Management</h2>
+
+            <button class="danger-btn" id="resetData">
+                Reset All Data
+            </button>
+
+            <button class="save-btn" id="saveSettings">
+                Save Settings
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/theme.js"></script>
+<script type="module" src="js/logout.js"></script>
+
+<script type="module" src="js/settings.js"></script>
+
+<script type="module" src="js/sidebar.js"></script>
+<script src="js/toast.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+/* ===========================
+   Global
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+/* ===========================
+   Signup Card
+=========================== */
+
+.signup-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.signup-card{
+    width:450px;
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+    text-align:center;
+}
+
+.logo{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.signup-card h1{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+/* ===========================
+   Inputs
+=========================== */
+
+.input-group{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.input-group input{
+    width:100%;
+    padding:14px 50px 14px 45px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:#334155;
+    color:white;
+    font-size:16px;
+}
+
+.input-group input::placeholder{
+    color:#94a3b8;
+}
+
+.input-group .fa-user,
+.input-group .fa-envelope,
+.input-group .fa-lock{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#94a3b8;
+}
+
+.toggle-password{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color:#94a3b8;
+    font-size:18px;
+    transition:.3s;
+}
+
+.toggle-password:hover{
+    color:#38bdf8;
+}
+
+/* ===========================
+   Terms
+=========================== */
+
+.terms{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#cbd5e1;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+/* ===========================
+   Button
+=========================== */
+
+.signup-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#38bdf8,#3b82f6);
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.signup-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(56,189,248,.35);
+}
+
+/* ===========================
+   Login Link
+=========================== */
+
+.login-link{
+    margin-top:25px;
+    color:#cbd5e1;
+}
+
+.login-link a{
+    color:#38bdf8;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.login-link a:hover{
+    text-decoration:underline;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:480px){
+
+    .signup-card{
+        width:100%;
+        padding:30px 20px;
+    }
+
+    .terms{
+        font-size:13px;
+    }
+
+}

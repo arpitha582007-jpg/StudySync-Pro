@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudySync Pro | Exams</title>
+
+    <link rel="stylesheet" href="css/exams.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="css/ui-polish.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar"></aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <h1>🎓 Exams</h1>
+
+        <p class="subtitle">
+            Manage your upcoming exams.
+        </p>
+        <input
+    type="text"
+    id="examSearch"
+    placeholder="🔍 Search exams..."
+    class="search-box">
+
+        <div class="exam-form">
+
+            <input
+                type="text"
+                id="examSubject"
+                placeholder="Subject Name">
+
+            <input
+                type="date"
+                id="examDate">
+
+            <input
+                type="time"
+                id="examTime">
+
+            <input
+                type="text"
+                id="examVenue"
+                placeholder="Exam Venue">
+
+            <textarea
+                id="examNotes"
+                rows="4"
+                placeholder="Notes (Optional)"></textarea>
+
+            <button id="addExam">
+                Add Exam
+            </button>
+
+        </div>
+
+        <div class="exam-list">
+
+            <h2>📅 Upcoming Exams</h2>
+
+            <div id="examContainer">
+
+                <p>No exams added yet.</p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/theme.js"></script>
+<script type="module" src="js/logout.js"></script>
+<script type="module" src="js/exams.js"></script>
+<script type="module" src="js/sidebar.js"></script>
+<script src="js/toast.js"></script>
+</body>
+</html>

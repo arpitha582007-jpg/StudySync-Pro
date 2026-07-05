@@ -1,0 +1,332 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:var(--bg);
+    color:var(--text);
+
+}
+
+.dashboard{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+.main-content{
+
+    margin-left:260px;
+    width:calc(100% - 260px);
+    padding:40px;
+
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+
+}
+
+h1{
+
+    font-size:36px;
+    margin-bottom:10px;
+
+    color:var(--text);
+
+}
+
+.subtitle{
+
+    color:var(--text-light);
+    margin-bottom:30px;
+
+}
+
+/* ==========================
+   Calendar Container
+========================== */
+
+.calendar-container{
+
+    background:var(--card);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.calendar-container:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ==========================
+   Header
+========================== */
+
+.calendar-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.calendar-header h2{
+
+    font-size:28px;
+
+    color:var(--text);
+
+}
+
+.calendar-header button{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.calendar-header button:hover{
+
+    background:var(--primary-dark);
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================
+   Weekdays
+========================== */
+
+.weekdays{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+    font-weight:600;
+
+    color:var(--text-light);
+
+}
+
+/* ==========================
+   Days
+========================== */
+
+.calendar-days{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:12px;
+
+}
+
+.day{
+
+    background:var(--card-hover);
+
+    border:1px solid var(--border);
+
+    border-radius:15px;
+
+    min-height:90px;
+
+    padding:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    position:relative;
+
+    color:var(--text);
+
+}
+
+.day:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}
+
+.day-number{
+
+    font-weight:bold;
+
+    font-size:18px;
+
+}
+
+.today{
+
+    border:3px solid var(--secondary);
+
+}
+
+.selected{
+
+    background:var(--secondary);
+
+    color:white;
+
+}
+
+.has-event::after{
+
+    content:"";
+
+    width:10px;
+
+    height:10px;
+
+    background:var(--success);
+
+    border-radius:50%;
+
+    position:absolute;
+
+    bottom:10px;
+
+    right:10px;
+
+}
+
+.empty{
+
+    background:transparent;
+
+    border:none;
+
+    cursor:default;
+
+}
+
+/* ==========================
+   Events Box
+========================== */
+
+.event-box{
+
+    margin-top:30px;
+
+    background:var(--card);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+.event-box h2{
+
+    margin-bottom:20px;
+
+    color:var(--text);
+
+}
+
+#eventList{
+
+    color:var(--text-light);
+
+}
+
+.event-item{
+
+    background:var(--card-hover);
+
+    color:var(--text);
+
+    padding:15px;
+
+    border-radius:12px;
+
+    margin-bottom:12px;
+
+    border-left:5px solid var(--primary);
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:768px){
+
+    .main-content{
+
+        margin-left:0;
+
+        width:100%;
+
+        padding:20px;
+
+    }
+
+    .calendar-days{
+
+        gap:8px;
+
+    }
+
+    .day{
+
+        min-height:70px;
+
+    }
+
+    .calendar-header h2{
+
+        font-size:22px;
+
+    }
+
+}

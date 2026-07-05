@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pomodoro | StudySync Pro</title>
+
+    <link rel="stylesheet" href="css/timer.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/ui-polish.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar"></aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <h1>🍅 Pomodoro Timer</h1>
+
+        <p class="subtitle">
+            Stay focused and boost your productivity.
+        </p>
+
+        <div class="timer-card">
+
+            <div id="timerDisplay">
+                25:00
+            </div>
+
+            <div class="timer-buttons">
+
+                <button onclick="startTimer()">
+                    ▶ Start
+                </button>
+                
+                <button onclick="pauseTimer()">
+                    ⏸ Pause
+                </button>
+                
+                <button onclick="resetTimer()">
+                    🔄 Reset
+                </button>
+
+            </div>
+
+            <div class="mode-buttons">
+
+                <button onclick="setMode(25)">
+                    25 Min
+                </button>
+            
+                <button onclick="setMode(5)">
+                    5 Min
+                </button>
+            
+                <button onclick="setMode(15)">
+                    15 Min
+                </button>
+            
+            </div>
+            
+            <div class="session-box">
+            
+                <h3>
+                    Sessions Completed Today
+                </h3>
+            
+                <h2 id="sessionCount">
+                    0
+                </h2>
+            
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/theme.js"></script>
+<script type="module" src="js/logout.js"></script>
+
+<script type="module" src="js/timer.js"></script>
+
+<script type="module" src="js/sidebar.js"></script>
+<script src="js/toast.js"></script>
+
+</body>
+
+</html>

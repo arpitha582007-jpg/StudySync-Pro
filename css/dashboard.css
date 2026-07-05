@@ -1,0 +1,328 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:var(--bg);
+    color:var(--text);
+
+}
+
+.dashboard{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+.menu-container{
+
+    scrollbar-width:thin;
+
+}
+
+.logo{
+
+    font-size:28px;
+    font-weight:700;
+
+    color:var(--secondary);
+
+    margin-bottom:40px;
+
+}
+
+.menu{
+
+    list-style:none;
+
+}
+
+.menu li{
+
+    padding:16px 18px;
+
+    border-radius:12px;
+
+    margin-bottom:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    color:var(--text);
+
+}
+
+.menu li:hover{
+
+    background:var(--card-hover);
+
+}
+
+.menu .active{
+
+    background:var(--primary);
+
+}
+
+.main-content{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    padding:40px;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    min-height:100vh;
+
+}
+
+/* ===========================
+   Welcome Section
+=========================== */
+
+.welcome-section h1{
+
+    color:var(--text);
+
+    margin-bottom:10px;
+
+}
+
+.welcome-section p{
+
+    color:var(--text-light);
+
+    font-size:16px;
+
+}
+
+/* ===========================
+   Dashboard Stats
+=========================== */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.stat-card{
+
+    background:var(--card);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    border:1px solid var(--border);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+}
+
+.stat-card i{
+
+    font-size:34px;
+
+    color:var(--secondary);
+
+    margin-bottom:15px;
+
+}
+
+.stat-card h2{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+    color:var(--text);
+
+}
+
+.stat-card p{
+
+    color:var(--text-light);
+
+}
+
+/* ===========================
+   Dashboard Widgets
+=========================== */
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+.dashboard-card{
+
+    background:var(--card);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    border:1px solid var(--border);
+
+    transition:.35s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.dashboard-card h2{
+
+    margin-bottom:20px;
+
+    font-size:22px;
+
+    color:var(--text);
+
+}
+
+.exam-list,
+.schedule-list{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.exam-list li,
+.schedule-list li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 0;
+
+    border-bottom:1px solid var(--border);
+
+    color:var(--text);
+
+}
+
+.exam-list li:last-child,
+.schedule-list li:last-child{
+
+    border-bottom:none;
+
+}
+
+/* ===========================
+   Progress Bar
+=========================== */
+
+.progress-bar{
+
+    height:12px;
+
+    background:rgba(0,0,0,.12);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin:25px 0;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    width:76%;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    border-radius:20px;
+
+}
+
+/* ===========================
+   Quick Action Buttons
+=========================== */
+
+.action-btn{
+
+    width:100%;
+
+    margin-bottom:15px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.action-btn:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/*

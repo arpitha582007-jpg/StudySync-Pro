@@ -1,0 +1,457 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:var(--bg);
+    color:var(--text);
+
+}
+
+.dashboard{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+.main-content{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    padding:40px;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    min-height:100vh;
+
+}
+
+h1{
+
+    font-size:36px;
+
+    color:var(--text);
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    color:var(--text-light);
+
+}
+
+/* ===========================
+   Statistics
+=========================== */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.stat-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.stat-card:hover{
+
+    background:var(--card-hover);
+
+    transform:translateY(-8px);
+
+}
+
+.stat-card i{
+
+    color:var(--primary);
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+.stat-card h2{
+
+    color:var(--text);
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    color:var(--text-light);
+
+}
+/* ===========================
+   Pomodoro Timer
+=========================== */
+
+.timer-card{
+
+    max-width:700px;
+
+    margin:40px auto;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.timer-card:hover{
+
+    background:var(--card-hover);
+
+    transform:translateY(-5px);
+
+}
+
+#timerDisplay{
+
+    font-size:80px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    margin:30px 0;
+
+    letter-spacing:3px;
+
+}
+
+.timer-buttons,
+
+.mode-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:20px;
+
+}
+
+.timer-buttons button,
+
+.mode-buttons button{
+
+    padding:14px 26px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.timer-buttons button:hover,
+
+.mode-buttons button:hover{
+
+    transform:translateY(-3px);
+
+    background:var(--primary-dark);
+
+    box-shadow:0 10px 25px rgba(59,130,246,.30);
+
+}
+
+.mode-buttons button.active{
+
+    background:var(--primary-dark);
+
+    box-shadow:0 0 0 3px rgba(59,130,246,.25);
+
+}
+/* ===========================
+   Session Box
+=========================== */
+
+.session-box{
+
+    margin-top:35px;
+
+    padding:25px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.session-box:hover{
+
+    background:var(--card-hover);
+
+    transform:translateY(-5px);
+
+}
+
+.session-box h2{
+
+    color:var(--primary);
+
+    font-size:42px;
+
+    margin-bottom:12px;
+
+}
+
+.session-box p{
+
+    color:var(--text-light);
+
+    font-size:17px;
+
+}
+
+/* ===========================
+   Progress
+=========================== */
+
+.progress-bar{
+
+    width:100%;
+
+    height:12px;
+
+    background:var(--card-hover);
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    margin-top:25px;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    width:0%;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    border-radius:999px;
+
+    transition:width .5s ease;
+
+}
+
+/* ===========================
+   Focus Animation
+=========================== */
+
+.timer-running{
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.03);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    .dashboard{
+
+        display:flex;
+
+        flex-direction:column;
+
+    }
+
+    .main-content{
+
+        margin-left:0;
+
+        width:100%;
+
+        padding:20px;
+
+    }
+
+    .timer-card{
+
+        margin:20px 0;
+
+        padding:25px;
+
+    }
+
+    #timerDisplay{
+
+        font-size:60px;
+
+    }
+
+    .timer-buttons,
+    .mode-buttons{
+
+        flex-direction:column;
+
+        gap:12px;
+
+    }
+
+    .timer-buttons button,
+    .mode-buttons button{
+
+        width:100%;
+
+    }
+
+    .session-box{
+
+        padding:20px;
+
+    }
+
+    .session-box h2{
+
+        font-size:34px;
+
+    }
+
+}
+
+/* ===========================
+   Empty State
+=========================== */
+
+.empty-state{
+
+    text-align:center;
+
+    padding:40px;
+
+    color:var(--text-light);
+
+}
+
+.empty-state i{
+
+    font-size:55px;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.empty-state h3{
+
+    margin-bottom:10px;
+
+    color:var(--text);
+
+}
+
+.empty-state p{
+
+    color:var(--text-light);
+
+}

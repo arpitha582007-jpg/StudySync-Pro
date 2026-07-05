@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudySync Pro | Sign Up</title>
+
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/ui-polish.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="signup-container">
+
+    <div class="signup-card">
+
+        <div class="logo">
+            📚
+        </div>
+
+        <h1>Create Account</h1>
+
+        <p class="subtitle">
+            Join StudySync Pro and organize your studies.
+        </p>
+
+        <form id="signupForm">
+
+            <!-- Full Name -->
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-user"></i>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Full Name"
+                    required>
+
+            </div>
+
+            <!-- Email -->
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required>
+
+            </div>
+
+            <!-- Password -->
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    required>
+
+                <i class="fa-solid fa-eye toggle-password"
+                   id="togglePassword"></i>
+
+            </div>
+
+            <!-- Confirm Password -->
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm Password"
+                    required>
+
+                <i class="fa-solid fa-eye toggle-password"
+                   id="toggleConfirmPassword"></i>
+
+            </div>
+
+            <label class="terms">
+
+                <input type="checkbox" id="terms" required>
+
+                I agree to the Terms & Conditions
+
+            </label>
+
+            <button type="submit" class="signup-btn">
+
+                Create Account
+
+            </button>
+
+        </form>
+
+        <div class="login-link">
+
+            Already have an account?
+
+            <a href="login.html">
+
+                Login
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="module" src="js/signup.js"></script>
+
+</body>
+
+</html>

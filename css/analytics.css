@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:var(--bg);
+    color:var(--text);
+
+}
+
+.dashboard{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+.main-content{
+
+    margin-left:260px;
+    width:calc(100% - 260px);
+    padding:40px;
+
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+
+}
+
+h1{
+
+    font-size:34px;
+    margin-bottom:10px;
+    color:var(--text);
+
+}
+
+.subtitle{
+
+    color:var(--text-light);
+    margin-bottom:30px;
+
+}
+
+/* ==========================
+   Chart Grid
+========================== */
+
+.chart-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+    gap:25px;
+
+}
+
+.chart-card{
+
+    background:var(--card);
+    padding:25px;
+    border-radius:20px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.chart-card:hover{
+
+    transform:translateY(-6px);
+
+    background:var(--card-hover);
+
+}
+
+.chart-card h2{
+
+    margin-bottom:20px;
+    text-align:center;
+
+    color:var(--text);
+
+}
+
+.chart-card canvas{
+
+    width:100% !important;
+    height:320px !important;
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:768px){
+
+    .main-content{
+
+        margin-left:0;
+        width:100%;
+        padding:20px;
+
+    }
+
+    .chart-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .chart-card canvas{
+
+        height:260px !important;
+
+    }
+
+}

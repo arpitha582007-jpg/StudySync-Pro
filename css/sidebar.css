@@ -1,0 +1,201 @@
+/* ==========================
+   Sidebar
+========================== */
+
+.sidebar{
+
+    width:260px;
+    height:100vh;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:25px 20px;
+
+    overflow:hidden;
+
+    background:var(--card);
+
+    color:var(--text);
+
+    border-right:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+/* ==========================
+   Logo
+========================== */
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================
+   Menu Container
+========================== */
+
+.menu-container{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    scrollbar-width:thin;
+
+    scrollbar-color:var(--primary) transparent;
+
+}
+
+/* ==========================
+   Menu
+========================== */
+
+.menu{
+
+    list-style:none;
+
+}
+
+.menu li,
+.logout li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px;
+
+    margin-bottom:10px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    color:var(--text);
+
+    transition:var(--transition);
+
+}
+
+.menu li:hover,
+.logout li:hover{
+
+    background:var(--card-hover);
+
+}
+
+.menu li.active{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:#ffffff;
+
+}
+
+.menu li.active i{
+
+    color:#ffffff;
+
+}
+
+.menu li i,
+.logout li i{
+
+    width:20px;
+
+    color:inherit;
+
+}
+
+.menu li a,
+.logout li a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+/* ==========================
+   Logout
+========================== */
+
+.logout{
+
+    margin-top:15px;
+
+    padding-top:15px;
+
+    border-top:1px solid var(--border);
+
+}
+
+/* ==========================
+   Scrollbar
+========================== */
+
+.menu-container::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.menu-container::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:10px;
+
+}
+
+.menu-container::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:768px){
+
+    .sidebar{
+
+        width:100%;
+
+        height:auto;
+
+        position:relative;
+
+        border-right:none;
+
+        border-bottom:1px solid var(--border);
+
+    }
+
+}
