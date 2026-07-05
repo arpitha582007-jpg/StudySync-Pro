@@ -64,45 +64,26 @@ async function updateDashboard() {
     // =========================
     // Statistics Cards
     // =========================
+    document.getElementById("taskCount").innerText = tasks.length;
 
-    const cards = document.querySelectorAll(".stat-card h2");
-
-    if (cards.length >= 7) {
-
-        // Today's Tasks
-        cards[0].innerText = tasks.length;
-
-        // Planner Events
-        cards[1].innerText = planner.length;
-
-        // Subjects
-        cards[2].innerText = subjects.length;
-
-        // Productivity
-        const completed =
-            tasks.filter(task => task.completed).length;
-
-        const productivity =
-            tasks.length > 0
-                ? Math.round((completed / tasks.length) * 100)
-                : 0;
-
-        cards[3].innerText = productivity + "%";
-
-        // Assignments
-        cards[4].innerText = assignments.length;
-
-        // Pending Assignments
-        const pending =
-            assignments.filter(a => !a.completed).length;
-
-        cards[5].innerText = pending;
-
-        // Upcoming Exams
-        cards[6].innerText = exams.length;
-
-    }
-
+    document.getElementById("studyHours").innerText = planner.length + "h";
+    
+    document.getElementById("subjectCount").innerText = subjects.length;
+    
+    const completed = tasks.filter(task => task.completed).length;
+    
+    const productivity = tasks.length
+        ? Math.round((completed / tasks.length) * 100)
+        : 0;
+    
+    document.getElementById("productivity").innerText = productivity + "%";
+    
+    document.getElementById("assignmentCount").innerText = assignments.length;
+    
+    document.getElementById("pendingAssignmentCount").innerText =
+        assignments.filter(a => !a.completed).length;
+    
+    document.getElementById("examCount").innerText = exams.length;
     // =========================
     // Welcome Message
     // =========================
