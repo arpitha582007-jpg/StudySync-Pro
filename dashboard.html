@@ -2,13 +2,12 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>StudySync Pro | Dashboard</title>
 
-    <!-- Dashboard CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/ui-polish.css">
@@ -22,150 +21,121 @@
     <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 </head>
 
 <body>
 
 <div class="dashboard">
 
-    <!-- ================= Sidebar ================= -->
-
+    <!-- Sidebar -->
     <aside class="sidebar"></aside>
-    <!-- ================= Main Content ================= -->
 
+    <!-- Main -->
     <main class="main-content">
 
-        <!-- Welcome Section -->
-
+        <!-- Welcome -->
         <section class="welcome-section">
-
             <h1 id="welcomeName">Welcome Back 👋</h1>
-
             <p>
                 Stay organized, track your progress,
                 and achieve your academic goals.
             </p>
-
         </section>
+
+        <!-- Stats -->
         <section class="stats-grid">
 
-            <div class="stat-card">
-                <i class="fa-solid fa-list-check"></i>
-                <h2>08</h2>
-                <p>Today's Tasks</p>
-            </div>
-        
-            <div class="stat-card">
-                <i class="fa-solid fa-book-open"></i>
-                <h2>5.5h</h2>
-                <p>Study Hours</p>
-            </div>
-        
-            <div class="stat-card">
-
-                <i class="fa-solid fa-book"></i>
-            
-                <h2>0</h2>
-            
-                <p>Subjects</p>
-            
-            </div>
-        
             <div class="stat-card">
                 <i class="fa-solid fa-list-check"></i>
                 <h2 id="taskCount">0</h2>
                 <p>Today's Tasks</p>
             </div>
-            
+
             <div class="stat-card">
                 <i class="fa-solid fa-book-open"></i>
                 <h2 id="studyHours">0h</h2>
                 <p>Study Hours</p>
             </div>
-            
+
             <div class="stat-card">
                 <i class="fa-solid fa-book"></i>
                 <h2 id="subjectCount">0</h2>
                 <p>Subjects</p>
             </div>
-            
+
             <div class="stat-card">
                 <i class="fa-solid fa-chart-line"></i>
                 <h2 id="productivity">0%</h2>
                 <p>Productivity</p>
             </div>
+
+            <div class="stat-card">
+                <i class="fa-solid fa-file-lines"></i>
+                <h2 id="assignmentCount">0</h2>
+                <p>Assignments</p>
+            </div>
+
+            <div class="stat-card">
+                <i class="fa-solid fa-hourglass-half"></i>
+                <h2 id="pendingAssignmentCount">0</h2>
+                <p>Pending Assignments</p>
+            </div>
+
+            <div class="stat-card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2 id="examCount">0</h2>
+                <p>Upcoming Exams</p>
+            </div>
+
         </section>
 
+        <!-- Dashboard -->
         <section class="dashboard-grid">
 
-            <!-- Upcoming Exams -->
-        
             <div class="dashboard-card">
-
                 <h2>📅 Upcoming Tasks</h2>
-            
-                <ul class="exam-list" id="dashboardTasks">
-            
-                </ul>
-            
+                <ul class="exam-list" id="dashboardTasks"></ul>
             </div>
-            <!-- Today's Schedule -->
-        
-            <div class="dashboard-card">
-        
-                <h2>🕒 Today's Schedule</h2>
-        
-                <ul class="schedule-list" id="todaySchedule">
 
+            <div class="dashboard-card">
+                <h2>🕒 Today's Schedule</h2>
+                <ul class="schedule-list" id="todaySchedule">
                     <li>No events scheduled for today.</li>
-                
                 </ul>
-        
             </div>
-        
-            <!-- Weekly Progress -->
-        
+
             <div class="dashboard-card">
-        
                 <h2>📈 Weekly Progress</h2>
-        
+
                 <div class="progress-bar">
-        
                     <div class="progress-fill"></div>
-        
                 </div>
-        
+
                 <p>76% Weekly Goal Completed</p>
-        
             </div>
-        
-            <!-- Quick Actions -->
-        
+
             <div class="dashboard-card">
-        
                 <h2>⚡ Quick Actions</h2>
-        
+
                 <button class="action-btn" onclick="location.href='tasks.html'">
                     + Add Task
                 </button>
-                
+
                 <button class="action-btn" onclick="location.href='subjects.html'">
                     + Add Subject
                 </button>
-                
+
                 <button class="action-btn" onclick="location.href='pomodoro.html'">
                     Start Pomodoro
                 </button>
-                
-        
             </div>
-        
+
         </section>
 
     </main>
 
 </div>
+
 <script type="module" src="js/auth.js"></script>
 <script type="module" src="js/theme.js"></script>
 <script type="module" src="js/logout.js"></script>
@@ -173,5 +143,4 @@
 <script type="module" src="js/sidebar.js"></script>
 
 </body>
-
 </html>
